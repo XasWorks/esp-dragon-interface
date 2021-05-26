@@ -1,0 +1,64 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: rgb(247, 247, 247);
+  --main-color: black;
+
+  --secondary-bg-color: rgb(243, 243, 243);
+  --secondary-border: 1px solid rgb(218, 218, 218);
+  --secondary-shadow-color: rgb(173, 174, 179);
+  --secondary-highlight-color: rgb(228, 228, 228);
+
+  --ind-standby: #9e9e9e;
+  --ind-ok: #4caf50;
+  --ind-warn: #ff9800;
+  --ind-err: #f93c4e;
+}
+
+.dark-theme {
+  --main-bg-color: rgb(44, 44, 44);
+  --main-color: rgb(236, 236, 236);
+
+  --secondary-bg-color: rgb(80, 80, 80);
+  --secondary-border: none;
+  --secondary-shadow-color: black;
+  --secondary-highlight-color: #6b6b6b;
+
+  --ind-standby: #848282;
+  --ind-ok: #2b9632;
+  --ind-warn: #ffc107;
+  --ind-err: #fa2f21;
+}
+
+.App {
+  text-align: center;
+
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: min(20vmin, 100px) auto;
+
+  height: 100vh;
+}
+
+.App-header {
+  text-align: left;
+
+  padding-top: 30px;
+  padding-left: 10px;
+
+  font-size: larger;
+}
+
+.ConfigContent {
+  width: min(100vw, 600px);
+
+  margin-left: auto;
+  margin-right: auto;
+}

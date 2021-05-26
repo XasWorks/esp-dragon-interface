@@ -1,0 +1,35 @@
+
+.RadioPanel {
+    height: 50px;
+
+    background-color: var(--secondary-bg-color);
+    transition: background-color 0.2s, box-shadow 0.5s;
+
+    border: var(--secondary-border);
+    border-bottom: none;
+
+    box-shadow: 2px 2px 5px -1px var(--secondary-shadow-color);
+    border-radius: 5px 0px 0px 0px;
+    overflow: hidden;
+
+    position: relative;
+
+    display: flex;
+}
+
+.RadioPanel .BasicPanel {
+    flex-grow: 1;
+}
+
+.RadioPanelIndicator {
+    position: absolute;
+
+    bottom: -1px;
+
+    height: 4px;
+
+    background-color: transparent;
+    transition: background-color 0.7s, left 0.7s;
+
+    z-index: 2;
+}

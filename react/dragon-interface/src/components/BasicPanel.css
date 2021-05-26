@@ -1,0 +1,63 @@
+
+
+.BasicPanel {
+    height: 50px;
+
+    background-color: var(--secondary-bg-color);
+    transition: background-color 0.2s, box-shadow 0.5s;
+
+    border: var(--secondary-border);
+    border-bottom: none;
+
+    box-shadow: 2px 2px 5px -1px var(--secondary-shadow-color);
+    border-radius: 5px 0px 0px 0px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.BasicPanelContent {
+    position: absolute;
+    top: calc(50% - 4px);
+    left: 0; 
+    right: 0;
+
+    transform: translate(0%, -50%);
+}
+
+.BasicPanelClickable {
+    cursor: pointer;
+}
+
+.BasicPanelClickable:hover {
+    box-shadow: 3px 3px 8px -1px var(--secondary-shadow-color);
+    background-color: var(--secondary-highlight-color);
+
+    z-index: 1;
+}
+.BasicPanelClickable:after {
+    content: "";
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.BasicPanelClickable:active:after {
+    background-color: black;
+    opacity: 0.2;
+}
+
+.BasicPanelIndicator {
+    position: absolute;
+
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+
+    height: 4px;
+
+    background-color: transparent;
+    transition: background-color 0.7s;
+}

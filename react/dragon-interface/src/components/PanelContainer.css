@@ -1,0 +1,12 @@
+
+
+.PanelContainerBox {
+    /*overflow: hidden;*/
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 10px;
+
+    border-radius: 20px;
+}
