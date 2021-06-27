@@ -1,0 +1,58 @@
+
+
+.LoginPanelRoot {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.LoginPanelShade {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+
+	z-index: 10;
+
+	opacity: 0.5;
+	background-color: rgb(0, 0, 0);
+}
+
+.LoginPanelForm {
+	background-color: var(--secondary-bg-color);
+	border-radius: 30px;
+	box-shadow: var(--secondary-shadow-color);
+
+	width: 	min(calc(100vw - 10px), 400px);
+	height:	min(calc(100vw - 40px), 300px);
+
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-around;
+	align-content: space-around;
+
+	z-index: 11;
+
+	padding: 20px;
+}
+
+.DisconnectWarning {
+	position: fixed;
+
+	top: 0px;
+	left: 0px;
+	right: 0px;
+
+	background-color: var(--ind-err);
+
+	transition: height 1s ease-in-out;
+	overflow: hidden;
+}

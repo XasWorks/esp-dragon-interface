@@ -22,6 +22,8 @@
   --main-bg-color: rgb(44, 44, 44);
   --main-color: rgb(236, 236, 236);
 
+  --header-color: rgb(65, 65, 65);
+
   --secondary-bg-color: rgb(80, 80, 80);
   --secondary-border: none;
   --secondary-shadow-color: black;
@@ -47,17 +49,10 @@
   height: 100vh;
 }
 
-.App-header {
-  text-align: left;
-
-  padding-top: 30px;
-  padding-left: 10px;
-
-  font-size: larger;
-}
-
 .ConfigContent {
-  width: min(100vw, 600px);
+  margin-top: 54px;
+
+  width: min(calc(100vw - 30px), 600px);
 
   margin-left: auto;
   margin-right: auto;

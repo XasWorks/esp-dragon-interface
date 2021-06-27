@@ -1,36 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
 import PanelContainer from './components/PanelContainer';
-import BasicPanel from './components/BasicPanel';
-import ButtonPanel from './components/ButtonPanel';
 
 import useESP from './api/useESP'
-import RadioPanel from './components/SliderButton';
+import PanelSelector from './components/PanelSelector';
+
+import OverlaySelector from './components/OverlaySelector';
+
+import TopBar from './components/TopBar';
+import NotificationBox from './components/NotificationBox';
 
 function App() {
-  let theme = useESP('values/v2', '', (esp, data) => data ? '' : ' dark-theme', []);
+  let theme = useESP('values/v2', '', (esp, data) => data ? ' dark-theme' : ' dark-theme', []);
+
+  const config = useESP('config', {}, (esp, data) => esp.config, []);
+
+  console.log("Our config is: " + JSON.stringify(config));
 
   return (
     <div className={"App" + theme}>
-      <header className="App-header">
-        dragon-home Interface
-      </header>
+      <NotificationBox />
+
+      <TopBar />
+      
+      <OverlaySelector />
 
       <div className="ConfigContent">
-        <PanelContainer title="Test Area 1">
-          <BasicPanel></BasicPanel>
-          <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', height: '50px'}}>
-            <ButtonPanel name="v1"/>
-            <ButtonPanel name="v2"/>
-            <ButtonPanel name="v1"/>
-          </div>
-          <RadioPanel options={{'ON': true, 'AUTO': 3, 'OFF': false}} name='v1'/>
-          <BasicPanel></BasicPanel>
-          <BasicPanel></BasicPanel>
-        </PanelContainer>
-
-        <PanelContainer title="Test Area 2" />
+        {Object.keys(config.sections || {}).map((category) =>
+          <PanelContainer key={category} title={category} config={config.sections[category]}>
+            {Object.keys(config.sections[category].fields).map((key) =>
+              <PanelSelector config={config.sections[category].fields[key]} name={key} key={key} className="InfoPanel"/>
+            )}
+          </PanelContainer>
+        )}
       </div>
+      
     </div>
   );
 }

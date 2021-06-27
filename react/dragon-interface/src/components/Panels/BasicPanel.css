@@ -10,30 +10,34 @@
     border-bottom: none;
 
     box-shadow: 2px 2px 5px -1px var(--secondary-shadow-color);
-    border-radius: 5px 0px 0px 0px;
     overflow: hidden;
 
     position: relative;
 }
 
-.BasicPanelContent {
-    position: absolute;
-    top: calc(50% - 4px);
-    left: 0; 
-    right: 0;
+.BasicPanelDisabled:after {
+    content: "";
 
-    transform: translate(0%, -50%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    background-color: rgb(82, 82, 82);
+    opacity: 0.3;
 }
 
 .BasicPanelClickable {
     cursor: pointer;
 }
-
-.BasicPanelClickable:hover {
-    box-shadow: 3px 3px 8px -1px var(--secondary-shadow-color);
-    background-color: var(--secondary-highlight-color);
-
-    z-index: 1;
+@media screen and (hover: hover) {
+    .BasicPanelClickable:hover {
+        box-shadow: 3px 3px 8px -1px var(--secondary-shadow-color);
+        background-color: var(--secondary-highlight-color);
+    
+        z-index: 1;
+    }
 }
 .BasicPanelClickable:after {
     content: "";

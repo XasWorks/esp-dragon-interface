@@ -1,0 +1,46 @@
+
+
+.ColourPanelRoot {
+	position: relative;
+}
+.ColourPanelRoot .BasicPanel {
+	display: flex;
+
+	align-items: center;
+	justify-content: space-around;
+
+	padding-bottom: 5px;
+}
+
+.ColourPanelRoot .BasicPanel {
+	border-radius: inherit;
+}
+
+.ColourPanelButton {
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 2px;
+
+	display: inline-block;
+
+	background-color: #fff;
+}
+
+.ColourPanelSwatch {
+	width: 38px;
+	height: 17px;
+
+	border-radius: 1px;
+}
+
+.ColourPanelFinished {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.ColourPanelRoot .sketch-picker {
+	position: absolute;
+}

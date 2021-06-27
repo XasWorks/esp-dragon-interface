@@ -1,4 +1,8 @@
 
+.PanelContainerRoot {
+    position: relative;
+    margin-top: 15px;
+}
 
 .PanelContainerBox {
     /*overflow: hidden;*/
@@ -9,4 +13,69 @@
     gap: 6px 10px;
 
     border-radius: 20px;
+}
+
+.ContainerTitle {
+    cursor: pointer;
+
+    font-size: larger;
+    text-align: left;
+
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-right: 40px;
+
+    margin-bottom: 8px;
+    margin-top: 15px;
+
+    padding-bottom: 3px;
+
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.PanelContainerMinimizer {
+    position: absolute;
+
+    top: 8px;
+    right: 20px;
+
+    font-size: large;
+}
+
+@media screen and (min-width: 600px) {
+    .PanelContainerBox .InfoPanel:nth-child(1) {
+        border-top-left-radius: 20px;
+    }
+    .PanelContainerBox .InfoPanel:nth-child(2) {
+        border-top-right-radius: 20px;
+    }
+
+    .PanelContainerBox .InfoPanel:nth-last-child(2) {
+        border-bottom-left-radius: 20px;
+    }
+    .PanelContainerBox .InfoPanel:nth-last-child(1) {
+        border-bottom-right-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .PanelContainerBox {
+        /*overflow: hidden;*/
+        display: grid;
+    
+        grid-template-columns: 1fr;
+        gap: 6px 10px;
+    
+        border-radius: 20px;
+    }
+    
+    .PanelContainerBox .InfoPanel:nth-child(1) {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    .PanelContainerBox .InfoPanel:nth-last-child(1) {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
 }

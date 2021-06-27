@@ -1,0 +1,102 @@
+
+.TopBarRoot {
+	display: block;
+
+	padding: 10px;
+	padding-top: 12px;
+
+	padding-right: 20px;
+
+	font-size: large;
+
+	position: fixed;
+
+	height: 45px;
+	width: 100%;
+
+	background-color: var(--header-color);
+	box-shadow: 0px 1px 3px 0px var(--secondary-shadow-color);
+
+	z-index: 10;
+}
+
+.TopBarIconList {
+	list-style-type: none;
+
+	display: flex;
+	flex-flow: row-reverse nowrap;
+	align-items: right;
+
+	margin: 0px;
+	padding-top: 3px;
+
+	gap: 6px;
+}
+
+.TopBarTitle {
+	float: left;
+
+	text-align: left;
+ 
+	font-size: large;
+}
+
+.TopBarSettingsIcon {
+	position: relative;
+}
+.TopBarSettingsList {
+	visibility: hidden;
+	position: absolute;
+
+	min-width: 200px;
+	padding: 0px;
+
+	top: 20px;
+	right: 5px;
+
+	list-style-type: none;
+
+	font-size: 18px;
+
+	background-color: var(--secondary-bg-color);
+	
+	box-shadow: 2px 3px 4px 1px var(--secondary-shadow-color);
+}
+.TopBarSettingsList li {
+	padding: 4px;
+
+	border-bottom: 1px solid grey;
+
+	height: 34px;
+
+	display: flex;
+	align-items: center;
+
+	cursor: pointer;
+
+	transition: background-color 0.5s;
+}
+.TopBarSettingsList li:hover {
+	background-color: var(--secondary-highlight-color);
+}
+.TopBarSettingsList li svg {
+	margin-right: 5px;
+}
+.TopBarSettingsList :last-child {
+	border-bottom: none;
+}
+.TopBarSettingsIcon:hover .TopBarSettingsList {
+	visibility: visible;
+}
+
+.top-bar-t-appear,
+.top-bar-t-enter,
+.top-bar-t-exit-active {
+	opacity: 0;
+
+	transition: all 0.3s;
+}
+
+.top-bar-t-enter-active {
+	opacity: 1;
+}

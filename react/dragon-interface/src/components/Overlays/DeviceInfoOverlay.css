@@ -1,0 +1,32 @@
+
+
+.DeviceInfoOverlayRoot table {
+	width: 100%;
+
+	margin: 0;
+	padding: 0;
+
+	border-spacing: 0px;
+}
+
+.DeviceInfoOverlayRoot thead {
+	font-weight: bold;
+	background-color: var(--secondary-highlight-color);
+}
+
+.DeviceInfoOverlayRoot td {
+	padding: 3px;
+}
+.DeviceInfoOverlayRoot tr :nth-child(1) {
+	text-align: right;
+}
+.DeviceInfoOverlayRoot tr :nth-child(2) {
+	text-align: left;
+	margin-left: 0px;
+
+	padding-left: 20px;
+}
+
+.DeviceInfoOverlayRoot tr:nth-child(even) {
+	background-color: var(--secondary-highlight-color);
+}

@@ -1,0 +1,21 @@
+
+.RadioPanel {
+    display: flex;
+}
+
+.RadioPanel .BasicPanel {
+    flex: 1 1;
+}
+
+.RadioPanelIndicator {
+    position: absolute;
+
+    bottom: -1px;
+
+    height: 4px;
+
+    background-color: transparent;
+    transition: background-color 0.7s, left 0.7s;
+
+    z-index: 2;
+}

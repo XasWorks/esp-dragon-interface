@@ -1,0 +1,40 @@
+
+
+.NotificationBoxRoot {
+	visibility: hidden;
+
+	position: fixed;
+
+	top: 80px;
+	right: 80px;
+
+	z-index: 20;
+
+	padding: 20px;
+
+	border-radius: 10px;
+
+	box-shadow: 5px 10px 3px 0px rgba(0, 0, 0, 0.6);
+
+	transition: all 0.2s;
+
+	transform: translate(100px, 0px);
+
+	opacity: 0;
+}
+
+.NotificationBoxRoot h2 {
+	font-size: larger;
+	text-align: left;
+
+	border-bottom: 1px solid grey;
+	
+	margin-top: 5px;
+}
+
+.notification-slide-enter, .notification-slide-enter-done {
+	visibility: visible;
+	opacity: 1;
+
+	transform: translate(0px, 0px);
+}
